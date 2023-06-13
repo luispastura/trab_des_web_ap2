@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@400;600&display=swap');
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Nunito';
+    text-align: center;
+}
+
+#descricao_jogador {
+    display: flex;
+    width: 80%;
+}
+
+#foto_descrição{
+    font-size: 20pt;
+}
+
+#detalhes_descrição {
+    margin-top: 4rem;
+    text-align: left;
+    padding-left: 20px;
+}
+
+@media (max-width : 768px) {
+    
+    #descrição_jogador {
+        display: grid;
+    }
+
+    #foto_descrição {
+        font-size: 15pt;
+    }
+
+    #detalhes_descrição {
+        margin-top: 2rem;
+        font-size: 10pt;
+    }
+}

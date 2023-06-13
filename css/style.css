@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@400;600&display=swap');
+
+body{
+    color: #ffffff;
+    background-color: black;
+    text-align: center;
+    font-family: 'Nunito';
+    font-weight: bolder;
+    
+}
+
+h1,h2 {
+    text-align: center;
+  }
+  
+.jogador-div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.4em;
+    text-align: center;
+}
+  
+a {
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+  }
+  
+#detalhes {
+    margin: 0 auto;
+    width: 50%;
+}
+  
+#imagem {
+    float: left;
+    margin-right: 3em;
+}
+  
+
+#feminino, #masculino{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
