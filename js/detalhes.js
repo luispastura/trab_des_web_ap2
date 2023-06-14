@@ -7,53 +7,55 @@ const nascimento = localStorage.getItem('nascimento');
 const altura = localStorage.getItem('altura');
 
 document.addEventListener('DOMContentLoaded', function() {
-    // img = imagem
-    //p = parágrafo
-    //nomeados assim para melhor entendimento além de adicionar elementos 
+  const nomeElement = document.createElement('p');
+  nomeElement.textContent = nome;
 
-    const nome_p = document.createElement('p');
-    nome_p.textContent = nome;
-    const posicao_p = document.createElement('p');
-    posicao_p.textContent = posicao;
-    const imagem_p = document.createElement('img');
-    imagem_p.src = imagem;
-    const descricao_p = document.createElement('p');
-    descricao_p.textContent = descricao;
-    const nome_completo_p = document.createElement('p');
-    nome_completo_p.textContent = "Nome completo: " + nome_completo;
-    const nascimento_p = document.createElement('p');
-    nascimento_p.textContent = "Nascimento: " + nascimento;
-    const altura_p = document.createElement('p');
-    altura_p.textContent = "Altura: " + altura;
+  const posicaoElement = document.createElement('p');
+  posicaoElement.textContent = posicao;
 
-    const descricao_jogador = document.getElementById('foto_descrição');
-    descricao_jogador.style.textAlign = "center"; 
-    descricao_jogador.style.textTransform = "uppercase"; 
-    descricao_jogador.style.fontWeight = "bolder"; 
+  const imagemElement = document.createElement('img');
+  imagemElement.src = imagem;
 
-    descricao_jogador.appendChild(imagem_p);
-    descricao_jogador.appendChild(nome_p);
-    descricao_jogador.appendChild(posicao_p);
+  const descricaoElement = document.createElement('p');
+  descricaoElement.textContent = descricao;
 
-    // usei a palavra descrição e descricao algumas vezes mas consegui me organziar e não confundir!
-    const detalhes_descricao = document.getElementById('detalhes_descrição');
-    detalhes_descricao.appendChild(descricao_p);
-    detalhes_descricao.appendChild(nome_completo_p);
-    detalhes_descricao.appendChild(nascimento_p);
-    detalhes_descricao.appendChild(altura_p);
+  const nomeCompletoElement = document.createElement('p');
+  nomeCompletoElement.textContent = "Nome completo: " + nome_completo;
 
-    const tudo = document.getElementById('descrição_jogador');
-    tudo.appendChild(descricao_jogador);
-    tudo.appendChild(detalhes_descricao);
+  const nascimentoElement = document.createElement('p');
+  nascimentoElement.textContent = "Nascimento: " + nascimento;
+  
+  const alturaElement = document.createElement('p');
+  alturaElement.textContent = "Altura: " + altura;
 
-    const voltar = document.createElement('a');
-    voltar.className = "div_voltar";
-    voltar.innerHTML = "Voltar";
-    voltar.href = "./index.html";
-    voltar.style.color = "#ffffff";
-    voltar.style.fontSize = "23pt";
-    voltar.style.textDecoration = "none";
-    
-    document.body.appendChild(tudo);
-    document.body.appendChild(voltar);
+  const descricaoJogadorElement = document.getElementById('foto_descrição');
+  descricaoJogadorElement.style.textAlign = "center"; 
+  descricaoJogadorElement.style.textTransform = "uppercase"; 
+  descricaoJogadorElement.style.fontWeight = "bolder";
+  descricaoJogadorElement.style.fontFamily ="Arial, Helvetica, sans-serif";
+
+  descricaoJogadorElement.appendChild(imagemElement);
+  descricaoJogadorElement.appendChild(nomeElement);
+  descricaoJogadorElement.appendChild(posicaoElement);
+
+  const detalhesDescricaoElement = document.getElementById('detalhes_descrição');
+  detalhesDescricaoElement.appendChild(descricaoElement);
+  detalhesDescricaoElement.appendChild(nomeCompletoElement);
+  detalhesDescricaoElement.appendChild(nascimentoElement);
+  detalhesDescricaoElement.appendChild(alturaElement);
+
+  const tudoElement = document.getElementById('descrição_jogador');
+  tudoElement.appendChild(descricaoJogadorElement);
+  tudoElement.appendChild(detalhesDescricaoElement);
+
+  const voltarElement = document.createElement('a');
+  voltarElement.className = "div_voltar";
+  voltarElement.innerHTML = "Voltar";
+  voltarElement.href = "./index.html";
+  voltarElement.style.color = "#ffffff";
+  voltarElement.style.fontSize = "23pt";
+  voltarElement.style.textDecoration = "none";
+  
+  document.body.appendChild(tudoElement);
+  document.body.appendChild(voltarElement);
 });

@@ -10,16 +10,20 @@ body{
 #descricao_jogador {
     display: flex;
     width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #foto_descrição{
     font-size: 20pt;
+    margin-top: 55px;
 }
 
 #detalhes_descrição {
     margin-top: 4rem;
     text-align: left;
     padding-left: 20px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (max-width : 768px) {
@@ -35,5 +39,24 @@ body{
     #detalhes_descrição {
         margin-top: 2rem;
         font-size: 10pt;
+    }
+}
+
+@media (max-width : 768px) {
+    #descrição_jogador {
+        display: grid;
+    }
+    #foto_descrição{
+        font-size: 15pt;
+    }
+    #detalhes_jogador {
+        margin-top: 2rem;
+        font-size: 10pt;
+    }
+}
+
+@media (max-width : 360px) {
+    #descrição_jogador{
+        width: 80%;
     }
 }
