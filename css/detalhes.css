@@ -42,19 +42,6 @@ body{
     }
 }
 
-@media (max-width : 768px) {
-    #descrição_jogador {
-        display: grid;
-    }
-    #foto_descrição{
-        font-size: 15pt;
-    }
-    #detalhes_jogador {
-        margin-top: 2rem;
-        font-size: 10pt;
-    }
-}
-
 @media (max-width : 360px) {
     #descrição_jogador{
         width: 80%;
